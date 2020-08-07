@@ -1,8 +1,8 @@
 :root{
     --font-color: #fff;
     --secondary-font-color: rgba(2, 7, 77, 0.924);
-    --secondary-color: rgb(33, 111, 199,0.7);
-    --nav-color: rgba(0, 0, 0, 0.5);
+    --secondary-color: rgb(116, 151, 134);
+    --nav-color: rgba(0, 0, 0, 0.3);
     --animation-speed: 1s;
     --main-font-family: 'Roboto', sans-serif;
     --title-font-family:'Shadows Into Light', cursive;
@@ -62,19 +62,19 @@ body{
 .page-info{
     height: 100vh;
     background: url(titanic.jpg)no-repeat center center/cover;
-    z-index: -2;
-    
+    z-index: -10;
+
 }
 
 .page-info::after{
     content: "";
-    position: sticky;
+    position: fixed;
     top:0;
     left:0;
     width: 100%;
     height: 100%;
     background-color: var(--secondary-color);
-    opacity: 0.2;
+    opacity: 0.05;
     pointer-events: none;
 }
 .keep-place{
@@ -125,7 +125,7 @@ body{
     z-index: 1;
 } 
 
-.main-page .main-page__title > li{
+.main-page .main-page__title > li, .result-page .result-page__title > li{
     display: inline;
     margin: 0 0.2vw;
     font-family: var(--title-font-family);
@@ -277,3 +277,49 @@ body{
     justify-content: end;
 }
 
+
+/* result page*/
+.result-page{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.result-page__container{
+    width: 40vw;
+    height: 30vh;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+.result-footer{
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+}
+
+.result-footer > a{
+    font-size: 2.5rem;
+}
+
+.result-page__mini-title{
+    font-size: 7rem;
+}
+
+.result-page__info{
+    font-size: 10rem;
+    filter: blur(35px);
+    animation: info-delay 4s ease-in 2s forwards;
+}
+
+@keyframes info-delay {
+    to{
+        filter: blur(0px);
+    }
+}
+
+.result-page .result__img{
+    align-self: flex-end;
+    opacity: 0.7;
+}

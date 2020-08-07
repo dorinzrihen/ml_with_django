@@ -2,14 +2,44 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,500&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- fonts  -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4e47c7cac3.js" crossorigin="anonymous"></script>
     {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <title>RESULT</title>
   </head>
   <body>
-    <a href="{% url 'home' %}">Click here to the homepage!</a>
-    <p>result is:</p>
-    <p>{{prediction}}</p>
+      <div class="page-info">
+          <main class="result-page">
+              <div>
+                <ul class="result-page__title">
+                  <li>T</li>
+                  <li>I</li>
+                  <li>T</li>
+                  <li>A</li>
+                  <li>N</li>
+                  <li>I</li>
+                  <li>C</li>
+                </ul>
+              </div>
+              <div class="result-page__container">
+                <div>
+                    <p class="result-page__mini-title">The Result Is</p>
+                    <p class="result-page__info">{{prediction}}</p>
+                </div>
+              </div>
+              <div class="result__img">
+                  <img src="/static/titanic-movie.png" alt="">
+              </div>
+          </main>
+          <div>
+              <footer class="result-footer">
+                  <a href="{% url 'home' %}">Back to homepage</a>
+              </footer>
+          </div>
+      </div>
   </body>
 </html>
