@@ -133,7 +133,7 @@ body{
     z-index: 1;
 } 
 
-.main-page .main-page__title > li, .result-page .result-page__title > li{
+.main-page .main-page__title > li, .result-page .result-page__title > li, .graphs__title > li{
     display: inline;
     margin: 0 0.2vw;
     font-family: var(--title-font-family);
@@ -328,6 +328,11 @@ body{
     opacity: 0.7;
 }
 
+/* graphs */
+.graphs-page{
+    overflow: visible;
+}
+
 @media (max-width: 900px) {
     * {
       font-size: 20px;
@@ -348,7 +353,7 @@ body{
     .result-page__container{
         width: 90vw;
     }
-    
+
     .result-page .result__img img{
         width: 80vw;
     }
