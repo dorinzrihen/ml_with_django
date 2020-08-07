@@ -24,7 +24,7 @@
       <div class="keep-place">
         <nav class="nav-bar">
           <ul>
-            <li><a href="#main">MAIN</a></li>
+            <li class="nav-var__current"><a href="#main">MAIN</a></li>
             <li><a href="#graph">GRAPH</a></li>
           </ul>
         </nav>
@@ -42,22 +42,22 @@
         <div class="main-page__container">
           <form action="{% url 'result' %}">
             {% csrf_token %}
-            <p>Pclass</p>
-            <input type="text" name="pclass">
+            <p>Passenger Class</p>
+            <input type="text" name="pclass" placeholder="1 = 1st; 2 = 2nd; 3 = 3rd">
             <p>Sex</p>
-            <input type="text" name="sex">
+            <input type="text" name="sex" placeholder="Male/Female">
             <p>Age</p>
-            <input type="text" name="age">
+            <input type="text" name="age" placeholder="25">
             <p>Sibsp</p>
-            <input type="text" name="sibsp">
+            <input type="text" name="sibsp" placeholder="Number of Siblings/Spouses Aboard">
             <p>Parents/children</p>
-            <input type="text" name="parch">
+            <input type="text" name="parch" placeholder="Number of Parents/Children Aboard">
             <p>Fare</p>
-            <input type="text" name="fare">
+            <input type="text" name="fare" placeholder="Passenger Fare">
             <p>Embarked</p>
-            <input type="text" name="embarked">
-            <p>Title</p>
-            <input type="text" name="title">
+            <input type="text" name="embarked" placeholder="C = Cherbourg; Q = Queenstown; S = Southampton">
+            <p>Full names</p>
+            <input type="text" name="title" placeholder="Wirz, Mr. Albert">
             <input type="submit">
           </form>
         </div>
