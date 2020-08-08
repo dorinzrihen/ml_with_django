@@ -1,81 +1,41 @@
 :root{
-    --font-color: #fff;
-    --secondary-font-color: rgba(2, 7, 77, 0.924);
-    --secondary-color: rgb(116, 151, 134);
-    --nav-color: rgba(0, 0, 0, 0.3);
-    --animation-speed: 1s;
-    --main-font-family: 'Roboto', sans-serif;
-    --title-font-family:'Shadows Into Light', cursive;
-    --read-more-color: rgba(233, 233, 233, 0.671);
+    --container-background: rgba(255,255,255,0.1)
 }
+
 html{
     font-size: 62.5%;
 }
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: var(--font-color);
-    font-family: var(--main-font-family);
-    font-size: 2rem;
-}
-
-
-
-ul{
-    list-style: none;
-}
-
-
-a{
-    text-decoration: none;
-}
-/* scroll bar */
-
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-
-  /* page-1  */
-
-.page-info{
-    background: url(titanic.jpg)no-repeat center center/cover;
-    z-index: -10;
-
-}
-
-.page-info::after{
-    content: "";
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
+.graphs-page__container{
+    padding: 50px;
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 80vw;
     height: 100%;
-    background-color: var(--secondary-color);
-    opacity: 0.05;
-    pointer-events: none;
+    text-align: center;
 }
 
-.main-page .main-page__title > li, .result-page .result-page__title > li, .graphs__title > li{
-    display: inline;
-    margin: 0 0.2vw;
-    font-family: var(--title-font-family);
-    font-size: 7rem;
+.graphs-page__container > div{
+    background: var(--container-background);
+    margin: 20px;
+    padding: 15px;
+    border: black 1px solid;
+}
+
+.graphs-page__mini-title{
+    font-size: 6rem;
+}
+
+.graphs-page__info p{
+    font-size: 3rem;
+}
+
+.graphs-page__container img{
+    width: 500px;
+    transition: width 1s;
+}
+
+.graphs-page__container img:hover{
+    width: 750px;
 }

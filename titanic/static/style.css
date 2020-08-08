@@ -1,126 +1,15 @@
-:root{
-    --font-color: #fff;
-    --secondary-font-color: rgba(2, 7, 77, 0.924);
-    --secondary-color: rgb(116, 151, 134);
-    --nav-color: rgba(0, 0, 0, 0.3);
-    --animation-speed: 1s;
-    --main-font-family: 'Roboto', sans-serif;
-    --title-font-family:'Shadows Into Light', cursive;
-    --read-more-color: rgba(233, 233, 233, 0.671);
-}
-html{
-    font-size: 62.5%;
-}
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: var(--font-color);
-    font-family: var(--main-font-family);
-    font-size: 2rem;
-}
-
-
-
-ul{
-    list-style: none;
-}
-
-
-a{
-    text-decoration: none;
-}
 body{
     overflow: hidden;
 }
 
-/* scroll bar */
-
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
-
-  /* page-1  */
-
-.page-info{
-    height: 100vh;
-    background: url(titanic.jpg)no-repeat center center/cover;
-    z-index: -10;
-    overflow: hidden;
-
-}
-
-.page-info::after{
-    content: "";
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--secondary-color);
-    opacity: 0.05;
-    pointer-events: none;
-}
 .keep-place{
     width: 100%;
     height: 7vh;
 }
 
-.nav-bar{
-    width: 100%;
-    background-color: var(--nav-color) ;
-    height: 5vh;
-    box-shadow: black 5px 2px 10px;
-    animation: ani-bar var(--animation-speed) ease forwards;
-}
-
-
-@keyframes ani-bar{
-    0%{
-        height: 0px;
-    }
-    50%{
-        height: 7vh;
-    }
-    100%{
-        height: 5vh;
-    }
-}
-
-
-.nav-bar ul{
-    height: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-
-}
-
-.nav-bar ul li{
-    width: 20vw;
-    display: inline-block;
-    margin: 5px;
-}
-
-.nav-bar ul li:hover , .nav-var__current{
-    background-color: var(--secondary-color);
+.page-info{
+    height: 100vh;
 }
 
 
@@ -219,6 +108,7 @@ body{
 }
 
 /* page 2 */
+
 
 .flex-container{
     justify-content: space-between;
@@ -328,9 +218,10 @@ body{
     opacity: 0.7;
 }
 
-/* graphs */
-.graphs-page{
-    overflow: visible;
+.titanic-story__back-main-page{
+    position: absolute;
+    top:50px;
+    right: 50px;
 }
 
 @media (max-width: 900px) {

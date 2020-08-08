@@ -1,0 +1,128 @@
+:root{
+    --background-color: rgba(255, 255, 255, 0.15);;
+    --font-color: #fff;
+    --secondary-font-color: rgba(2, 7, 77, 0.924);
+    --secondary-color: rgb(95, 178, 136);
+    --nav-color: rgba(0, 0, 0, 0.3);
+    --animation-speed: 1s;
+    --main-font-family: 'Roboto', sans-serif;
+    --title-font-family:'Shadows Into Light', cursive;
+    --read-more-color: rgba(233, 233, 233, 0.671);
+}
+html{
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--font-color);
+    font-family: var(--main-font-family);
+    font-size: 2rem;
+}
+
+
+
+ul{
+    list-style: none;
+}
+
+
+a{
+    text-decoration: none;
+}
+/* scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* page-1  */
+
+.page-info{
+    position: relative;
+    background: url(titanic.jpg)no-repeat center center/cover;
+
+}
+
+.page-info::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: var(--background-color);
+    );
+}
+
+.page-z-index{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.main-page .main-page__title > li, .result-page .result-page__title > li, .graphs__title > li{
+    display: inline;
+    margin: 0 0.2vw;
+    font-family: var(--title-font-family);
+    font-size: 7rem;
+}
+
+.nav-bar{
+    width: 100%;
+    background-color: var(--nav-color) ;
+    height: 5vh;
+    box-shadow: black 5px 2px 10px;
+    animation: ani-bar var(--animation-speed) ease forwards;
+}
+
+
+@keyframes ani-bar{
+    0%{
+        height: 0px;
+    }
+    50%{
+        height: 7vh;
+    }
+    100%{
+        height: 5vh;
+    }
+}
+
+
+.nav-bar ul{
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.nav-bar ul li{
+    width: 20vw;
+    display: inline-block;
+    margin: 5px;
+}
+
+.nav-bar ul li:hover , .nav-var__current{
+    background-color: var(--secondary-color);
+}

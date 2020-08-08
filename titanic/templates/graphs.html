@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/4e47c7cac3.js" crossorigin="anonymous"></script>
   {% load static %}
+    <link rel="stylesheet" href="{% static 'utility.css' %}">
+      {% load static %}
     <link rel="stylesheet" href="{% static 'graphs.css' %}">
     <title>GRAPHS</title>
   <link rel="stylesheet" href="/titanic/static/style.css">
@@ -20,6 +22,15 @@
 <body>
   <!-- page one -->
       <div class="page-info graphs-page">
+        <div class="page-z-index">
+          <div class="keep-place">
+            <nav class="nav-bar">
+              <ul>
+                <li><a href="{% url 'home' %}">MAIN</a></li>
+                <li class="nav-var__current"><a href="{% url 'graphs' %}">GRAPH</a></li>
+              </ul>
+            </nav>
+          </div>
           <main>
               <div>
                 <ul class="graphs__title">
@@ -41,7 +52,7 @@
                     </div>
                   </div>
                   <div>
-                    <p class="graphs-page__mini-title">Survive compared Pclass</p>
+                    <p class="graphs-page__mini-title">Survive compared SibSp</p>
                     <img src="/static/graph2.png" alt="">
                     <div class="graphs-page__info">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque error vel reprehenderit, neque voluptatem optio, repellendus impedit accusantium corrupti ut nisi nemo excepturi. Magnam consectetur soluta minima optio! Cupiditate culpa deleniti corrupti excepturi eveniet, non vitae sint fugiat perspiciatis recusandae repellendus itaque ipsa quisquam libero quod illum exercitationem dolore!</p>
@@ -49,7 +60,7 @@
                     </div>
                   </div>
                   <div>
-                    <p class="graphs-page__mini-title">Survive compared Pclass</p>
+                    <p class="graphs-page__mini-title">Survive compared Embarked</p>
                     <img src="/static/graph3.png" alt="">
                     <div class="graphs-page__info">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque error vel reprehenderit, neque voluptatem optio, repellendus impedit accusantium corrupti ut nisi nemo excepturi. Magnam consectetur soluta minima optio! Cupiditate culpa deleniti corrupti excepturi eveniet, non vitae sint fugiat perspiciatis recusandae repellendus itaque ipsa quisquam libero quod illum exercitationem dolore!</p>
@@ -57,10 +68,8 @@
                     </div>
                   </div>
               </div>
-              <div class="result__img">
-                  <img src="/static/titanic-movie.png" alt="">
-              </div>
           </main>
+        </div>
   </div>
 
 </body>
